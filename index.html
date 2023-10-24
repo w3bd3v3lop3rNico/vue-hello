@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img {
+            aspect-ratio: 16/9;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .d-none {
+            display: none;
+        }
+        .d-block {
+            display: block;
+        }
+    </style>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body>
-    <div id="app">{{ message }}</div>
+<body id="app">
+    <div>{{ message }}</div>
+    <h1>{{ message }}</h1>
+    <input type="text" v-model="message">
+    <div>
+        <img :src="imgSrc" alt="">
+    </div>
+    <div :class="display">
+        <img src="./img/01.webp" alt="">
+    </div>
+    <input type="text" v-model="display">
+    
     <script src="./app.js"></script>
 </body>
 </html>

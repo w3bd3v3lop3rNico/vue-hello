@@ -6,8 +6,13 @@ createApp({
     data() {
         
       return {
-        message: 'Hello Vue!'  
+        message: 'Hello Vue!',
+        imgSrc: "./img/01.webp",
+        display: "d-none",
       }
+    },
+    methods: {
+        
     }
   }).mount('#app')
 
